@@ -31,3 +31,33 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+  background: none;
+  /* border: 1px solid whitesmoke; */
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+  /* background: #888; */
+  background: none;
+  /* border-radius: 6px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Optional: Corner of the scrollbar for diagonal scrolling */
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}
+
