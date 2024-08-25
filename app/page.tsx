@@ -1,12 +1,9 @@
-import { SidebarDemo } from "@/components/customUI/sidebar";
-import { Cover } from "@/components/ui/cover";
-
+import { Dashboard, SidebarDemo } from "@/components/customUI/sidebar";
 
 export default function Home() {
   return (
     <>
-      <SidebarDemo />
-    
+      <Dashboard />
     </>
   );
 }

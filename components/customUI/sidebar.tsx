@@ -16,11 +16,13 @@ import { MacbookScrollDemo } from "./MacbookScrollDemo";
 import { StickyScrollRevealDemo } from "./StickyScrollRevealDemo";
 import ProfileImage from '../../asserts/profile-pic.png'
 
-export function SidebarDemo() {
+export function SidebarDemo({ children }: Readonly<{
+    children: React.ReactNode;
+}>) {
     const links = [
         {
             label: "Components",
-            href: "#",
+            href: "/components",
             icon: (
                 <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
@@ -84,14 +86,15 @@ export function SidebarDemo() {
                     </div>
                 </SidebarBody>
             </Sidebar>
-            <Dashboard />
+            {/* <Dashboard /> */}{children}
         </div>
     );
 }
+
 export const Logo = () => {
     return (
         <Link
-            href="#"
+            href="/"
             className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
         >
             <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
@@ -117,13 +120,11 @@ export const LogoIcon = () => {
 };
 
 // Dummy dashboard component with content
-const Dashboard = () => {
+export const Dashboard = () => {
     return (
         <div className="flex flex-1">
             <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
                 <div className="h-screen overflow-y-auto">
-
-
                     <div className="h-screen flex justify-center items-center">
                         <div>
                             <h1 className=" text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
@@ -131,29 +132,9 @@ const Dashboard = () => {
                             </h1>
                         </div>
                     </div>
-
                     <MacbookScrollDemo />
                     <StickyScrollRevealDemo />
-                    {/* <div className="h-screen flex justify-center items-center">
-                       hihihi
-                    </div> */}
                 </div>
-                {/* <div className="flex gap-2">
-          {[...new Array(4)].map((i) => (
-            <div
-              key={"first-array" + i}
-              className="h-20 w-full rounded-lg  bg-gray-100 dark:bg-neutral-800 animate-pulse"
-            ></div>
-          ))}
-        </div>
-        <div className="flex gap-2 flex-1">
-          {[...new Array(2)].map((i) => (
-            <div
-              key={"second-array" + i}
-              className="h-full w-full rounded-lg  bg-gray-100 dark:bg-neutral-800 animate-pulse"
-            ></div>
-          ))}
-        </div> */}
             </div>
         </div>
     );
