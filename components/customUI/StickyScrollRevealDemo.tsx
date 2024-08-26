@@ -37,7 +37,7 @@ const content = [
             "Unlike pre-packaged libraries, our components are easy to understand and modify. Tailor them to suit your exact requirements without digging through extensive documentation or source code.",
         content: (
             <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-                Simplifying Developers' Lives
+                Simplifying Developers Lives
             </div>
         ),
     },
