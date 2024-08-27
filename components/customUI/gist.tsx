@@ -3,6 +3,8 @@ import CodeMirror from '@uiw/react-codemirror';
 import { dracula } from '@uiw/codemirror-theme-dracula';
 import { AnimatedTooltip } from '../ui/animated-tooltip';
 import Link from 'next/link';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface GistEmbedProps {
     gistId: string;
@@ -38,7 +40,22 @@ const GistEmbed: React.FC<GistEmbedProps> = ({ gistId, showTools = true, route }
 
     const copyToClipboard = (content: string) => {
         navigator.clipboard.writeText(content)
-            .then(() => alert('Code copied to clipboard!'))
+            .then(() =>
+                toast.dark('Code copied to clipboard!.', {
+                    position: "top-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    style: {
+                        backgroundColor: 'black',
+                        color: 'white',
+                        fontSize:"12px"
+                    },
+                })
+            )
             .catch(err => console.error('Failed to copy:', err));
     };
 
@@ -47,6 +64,7 @@ const GistEmbed: React.FC<GistEmbedProps> = ({ gistId, showTools = true, route }
             {loading ? (<>
                 <p>loading..</p>
             </>) : (<>
+                <ToastContainer />
                 {gistFiles.map(file => (
                     <div key={file.filename} className='py-1'>
                         <div className='flex justify-between items-center'>
@@ -59,7 +77,7 @@ const GistEmbed: React.FC<GistEmbedProps> = ({ gistId, showTools = true, route }
                                         designation="Click to view"
                                         child={
                                             <Link href={`/${route}/${gistId}`} >
-                                                <button 
+                                                <button
                                                     type="button"
                                                     // onClick={() => copyToClipboard(file.content)}
                                                     className="text-gray-900 flex justify-center animate-shimmer bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-md text-sm px-5 py-2.5 text-center items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
@@ -94,7 +112,7 @@ const GistEmbed: React.FC<GistEmbedProps> = ({ gistId, showTools = true, route }
                                 />
                             </div>
                         </div>
-
+                        
                         <CodeMirror
                             value={file.content}
                             height="auto"
