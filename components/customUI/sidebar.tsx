@@ -29,14 +29,14 @@ export function SidebarDemo({ children }: Readonly<{
         },
         {
             label: "Profile",
-            href: "#",
+            href: "/profile",
             icon: (
                 <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
         },
         {
             label: "Documentation",
-            href: "#",
+            href: "/documentation",
             icon: (
                 <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
@@ -54,7 +54,7 @@ export function SidebarDemo({ children }: Readonly<{
         <div
             className={cn(
                 "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
-                "h-screen" 
+                "h-screen"
             )}
         >
             <Sidebar open={open} setOpen={setOpen}>
@@ -97,7 +97,7 @@ export const Logo = () => {
             href="/"
             className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
         >
-            <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+            {/* <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" /> */}
             <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -114,7 +114,7 @@ export const LogoIcon = () => {
             href="#"
             className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
         >
-            <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+            {/* <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" /> */}
         </Link>
     );
 };
@@ -132,7 +132,10 @@ export const Dashboard = () => {
                             </h1>
                         </div>
                     </div>
-                    <MacbookScrollDemo />
+                    <div className="hidden sm:block">
+                        <MacbookScrollDemo />
+                    </div>
+
                     <StickyScrollRevealDemo />
                 </div>
             </div>
