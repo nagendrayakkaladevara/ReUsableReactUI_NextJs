@@ -15,7 +15,7 @@ export default function Components() {
                 <BentoGridThirdDemo />
                 <BentoGridDemo />
                 
-                <AnimatedModalDemo />
+                {/* <AnimatedModalDemo /> */}
             </div>
         </>
     )
