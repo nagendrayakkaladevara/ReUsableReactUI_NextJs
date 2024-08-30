@@ -28,6 +28,15 @@ const RouteButtonDisplay = () => {
                 <div>
                     <Button variant="info" isDisabled>Disabled Button</Button>
                 </div>
+                <div>
+                    <Button variant="secondary" size="small">Secondary Small</Button>
+                </div>
+                <div>
+                    <Button variant="success" size="small">Success Small</Button>
+                </div>
+                <div>
+                    <Button variant="danger" size="medium">Danger Medium</Button>
+                </div>
             </div>
         </>
     )

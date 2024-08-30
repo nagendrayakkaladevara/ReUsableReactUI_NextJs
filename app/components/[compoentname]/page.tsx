@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import RouteBackgroundDisplay from "@/components/customUI/routebackgroundDisplay";
 import RouteCardDisplay from "@/components/customUI/routeCardDisplay";
+import Footer from "@/components/customUI/footer";
 
 export default function ComponentScreen() {
 
@@ -56,6 +57,10 @@ export default function ComponentScreen() {
                         ComponentContent={currentData.Component}
                     />
                 )}
+
+                <div>
+                    <Footer />
+                </div>
             </div>
         </>
     )
