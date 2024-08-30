@@ -15,6 +15,7 @@ import { Cover } from "../ui/cover";
 import { MacbookScrollDemo } from "./MacbookScrollDemo";
 import { StickyScrollRevealDemo } from "./StickyScrollRevealDemo";
 import ProfileImage from '../../asserts/profile-pic.png'
+import Footer from "./footer";
 
 export function SidebarDemo({ children }: Readonly<{
     children: React.ReactNode;
@@ -139,6 +140,10 @@ export const Dashboard = () => {
                     </div>
 
                     <StickyScrollRevealDemo />
+
+                    <div>
+                        <Footer /> 
+                    </div>
                 </div>
             </div>
         </div>
