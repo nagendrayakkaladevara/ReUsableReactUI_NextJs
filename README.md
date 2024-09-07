@@ -11,3 +11,4 @@ This project is a library of pre-built, customizable, and reusable React compone
 - Ready-to-Use Code Snippets: Easily copy and paste React code snippets for your projects
 - Component Customization: Modify styles, sizes, and variants with ease.
 - Developer-Friendly: Focus on enhancing productivity by reducing repeated coding.
+- Tailwind CSS out of the box
