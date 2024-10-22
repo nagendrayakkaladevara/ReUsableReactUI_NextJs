@@ -353,13 +353,13 @@ const items = [
         title: "Toast",
         description: (
             <span className="text-sm">
-                {/* Summarize your lengthy documents with AI technology. */} Will be added soon
+                {/* Summarize your lengthy documents with AI technology. */} New
             </span>
         ),
         header: <SkeletonFive />,
         className: "md:col-span-1",
         icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-        link: ''
+        link: '/components/toast'
         
     },
 ];

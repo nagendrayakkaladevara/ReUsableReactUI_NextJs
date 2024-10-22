@@ -22,6 +22,7 @@ export function BentoGridDemo() {
                     header={item.header}
                     icon={item.icon}
                     className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                    link={item.link}
                 />
             ))}
         </BentoGrid>
@@ -33,9 +34,10 @@ const Skeleton = () => (
 const items = [
     {
         title: "Box Shadow",
-        description: "Will be added soon",
+        description: "New",
         header: <Skeleton />,
         icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+        link: '/components/boxshadow'
     },
     {
         title: "Popup",

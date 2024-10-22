@@ -8,7 +8,7 @@ export function MacbookScrollDemo() {
             <MacbookScroll
                 title={
                     <span>
-                        Streamline your development process with our ready-to-use React component code. Simply copy the code and paste it in your file, you can quickly integrate reusable components into your projects without no dependencies.
+                        Streamline your development process with our ready-to-use React component code. <br />Simply copy the code and paste it in your file, you can quickly integrate reusable components into your projects without no dependencies.
                     </span>
                 }
                 badge={

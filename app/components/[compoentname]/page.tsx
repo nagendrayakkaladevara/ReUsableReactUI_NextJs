@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import RouteBackgroundDisplay from "@/components/customUI/routebackgroundDisplay";
 import RouteCardDisplay from "@/components/customUI/routeCardDisplay";
 import Footer from "@/components/customUI/footer";
+import ToastDisplay from "@/components/customUI/toast";
+import BoxShadowDisplay from "@/components/customUI/boxshadowDisplay";
 
 export default function ComponentScreen() {
 
@@ -30,12 +32,22 @@ export default function ComponentScreen() {
         Component: <RouteBackgroundDisplay />,
         gistId: "f78f861c5d785e103065174114911fb6",
         route: "components/background",
-    },{
+    }, {
         name: 'card',
         Component: <RouteCardDisplay />,
-        gistId: "4728abe473f0f47851229a92ac9506ed",
+        gistId: "a3bfcd44f29d593b0abd5b2b98abb058",
         route: "components/card",
-    },]
+    }, {
+        name: 'toast',
+        Component: <ToastDisplay />,
+        gistId: "c5cfbb4a30c2afd99f0fa0162edca273",
+        route: "components/toast",
+    }, {
+        name: 'boxshadow',
+        Component: <BoxShadowDisplay />,
+        gistId: "4b54a9951e805ecf68f5c6c165d12d4c",
+        route: "components/boxshadow",
+    }]
 
     useEffect(() => {
         const data = Data.find((item) => pathname.includes(item.route));
